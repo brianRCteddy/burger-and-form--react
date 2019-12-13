@@ -12,7 +12,7 @@ const SideDrawer = (props) => {
 	}
 	return (
 		<Auxiliary>
-			<Backdrop show={props.open} clicked={props.closed} />
+			<Backdrop show={props.open} back={props.closed} />
 			<div className={attachedClasses.join(' ')}>
 				<div className={classes.Logo}>
 					<Logo />
