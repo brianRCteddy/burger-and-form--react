@@ -32,8 +32,8 @@ class Posts extends Component {
 	}
 
 	postSelectedHandler = (id) => {
-		//this.props.history.push({ pathname: '/' + id });
-		this.props.history.push('/' + id);
+		//this.props.history.push({ pathname: '/posts/' + id });
+		this.props.history.push('/posts/' + id);
 	};
 
 	render() {
@@ -56,7 +56,7 @@ class Posts extends Component {
 		return (
 			<div>
 				<section className={classes.Posts}>{posts}</section>;
-				<Route path="/:id" component={FullPost} />
+				<Route path={this.props.match.url + '/:id'} component={FullPost} />
 			</div>
 		);
 	}
@@ -64,5 +64,5 @@ class Posts extends Component {
 
 export default Posts;
 //Removed to Programatically link
-//<Link to={'/' + post.id} key={post.id}>
+//<Link to={'/posts/' + post.id} key={post.id}>
 //</Link>
